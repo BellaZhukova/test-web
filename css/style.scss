@@ -1,0 +1,328 @@
+$color-base-field: rgba(183, 186, 203, 0.2);
+$color-button: rgba(183, 186, 203, 0.4);
+$color-base-button: #BF3266;
+$color-large-text: #000000;
+$color-small-text: #333333;
+$color-active: #FFFFFF;
+
+$base-box-shadow: 0 4px 55px rgba(133, 133, 133, 0.25);
+
+$base-height: 60px;
+
+$base-font-size: 18px;
+
+@font-face {
+  font-family: 'FuturaPT-Book';
+  src: url("../font/FuturaPT-Book.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Demi';
+  src: url("../font/FuturaPT-Demi.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.error-message {
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  height: 100vh;
+
+  &__title {
+    font-family: 'FuturaPT-Demi', sans-serif;
+    font-size: 48px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.block {
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    width: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'FuturaPT-Book', sans-serif;
+    font-size: $base-font-size;
+    color: $color-small-text;
+    border: none;
+    background-color: $color-base-field;
+
+    &--active {
+      width: 131px;
+      height: $base-height;
+      border: none;
+      background: $color-active;
+      font-family: 'FuturaPT-Book', sans-serif;
+      font-size: $base-font-size;
+      box-shadow: $base-box-shadow;
+      color: $color-small-text;
+      z-index: 1;
+    }
+
+    &--disable {
+      width: 131px;
+      height: $base-height;
+      border: none;
+      background: $color-active;
+      font-family: 'FuturaPT-Book', sans-serif;
+      font-size: $base-font-size;
+      box-shadow: $base-box-shadow;
+      color: $color-small-text;
+    }
+  }
+
+  &__calculator {
+    position: relative;
+    display: flex;
+    box-shadow: $base-box-shadow;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+
+  &__check {
+    position: relative;
+    background-color: $color-active;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 35px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'FuturaPT-Book', sans-serif;
+    font-size: $base-font-size;
+    position: relative;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 295px;
+    height: $base-height;
+    background-color: $color-base-field;
+  }
+
+  &__cost {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 35px;
+
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+.input {
+  &__decrement {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $color-button;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 30px;
+    outline: none;
+    border: none;
+    font-family: 'FuturaPT-Book', sans-serif;
+    font-size: $base-font-size;
+    background-color: transparent;
+    color: $color-large-text;;
+  }
+
+  &__square {
+    font-size: 14px;
+  }
+
+  &__increment {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $color-button;
+  }
+}
+
+#input-angles {
+  width: 20px;
+}
+
+.select {
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: $color-base-button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cost {
+
+  &__title {
+    font-family: 'FuturaPT-Demi', sans-serif;
+    font-size: 36px;
+  }
+
+  &__cost {
+    color: $color-base-button;
+  }
+
+  &__note {
+    font-family: 'FuturaPT-Book', sans-serif;
+    font-size: $base-font-size;
+  }
+}
+
+
+.button {
+
+  &__question {
+    position: relative;
+    &-block {
+      position: absolute;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      background-color: $color-large-text;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  &__cost {
+    width: 232px;
+    height: $base-height;
+    background-color: $color-base-button;
+    font-family: 'FuturaPT-Demi', sans-serif;
+    font-size: $base-font-size;
+    color: $color-active;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &__download {
+    width: 232px;
+    height: $base-height;
+    background-color: transparent;
+    border: 1px solid $color-base-button;
+    font-family: 'FuturaPT-Demi', sans-serif;
+    font-size: $base-font-size;
+    color: $color-base-button;
+    border-radius: 5px;
+
+  }
+
+}
+.select {
+  &__options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+  }
+  &__option {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 295px;
+    height: 60px;
+    background: #B7BACB;
+    border: none;
+    border-bottom: 1px solid $color-small-text;
+    z-index: 1;
+
+  }
+}

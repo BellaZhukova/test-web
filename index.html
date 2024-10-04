@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Калькулятор</title>
+    <script type="text/javascript" src="js/jquery/jquery-3.7.1.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+</head>
+<body>
+<div class="page">
+    <div class="container">
+        <div class="content">
+            <h1 class="content__title">Рассчитайте стоимость Вашего потолка онлайн!</h1>
+            <div class="content__block">
+                <section class="block__buttons">
+                    <button class="block__button--active">Комната №1</button> <!--- --->
+                    <button class="block__button">
+                        <img src="img/icons/plus-circle.svg" alt="plus">
+                        Добавить комнату
+                    </button>
+                </section>
+                <section class="block__calculator">
+                    <div class="calculator__check">
+                        <div class="calculator__inputs">
+                            <div class="calculator__label"> <!---начало--->
+                                <label for="input-square">Площадь помещения:</label>
+                                <div class="calculator__input">
+                                    <button class="input__decrement"><img src="img/icons/minus.svg" alt="minus"></button>
+                                    <div class="input__value">
+                                        <input class="input__input" id="input-square">
+                                        <p>м<sup class="input__square">2</sup></p>
+                                    </div>
+                                    <button class="input__increment"><img src="img/icons/plus.svg" alt="plus"></button>
+                                </div>
+                            </div> <!---конец--->
+                            <div class="calculator__label"> <!---начало--->
+                                <label for="input-angles">Количество углов:</label>
+                                <div class="calculator__input">
+                                    <button class="input__decrement"><img src="img/icons/minus.svg" alt="minus"></button>
+                                    <div class="input__value">
+                                        <input class="input__input" id="input-angles">
+                                        <p>шт.</p>
+                                    </div>
+                                    <button class="input__increment"><img src="img/icons/plus.svg" alt="plus"></button>
+                                </div>
+                            </div> <!---конец--->
+                            <div class="calculator__label"> <!---начало--->
+                                <label>Фактура потолка:</label>
+                                <div class="calculator__input">
+                                    <div class="select__content">
+                                        <p class="select__main" id="select__material"></p>
+                                        <button class="select__button"><img src="img/icons/arrow-down.svg" alt="arrow"></button>
+                                    </div>
+                                </div>
+                                <div class="select__options">
+                                    <button class="select__option" value="ПВХ">ПВХ</button>
+                                    <button class="select__option" value="Тканевый">Тканевый</button>
+                                </div>
+                            </div> <!---конец--->
+                            <div class="calculator__label"> <!---начало--->
+                                <label>Цвет потолка:</label>
+                                <div class="calculator__input">
+                                    <div class="select__content">
+                                        <p class="select__main" id="select__color"></p>
+                                        <button class="select__button"><img src="img/icons/arrow-down.svg" alt="arrow"></button>
+                                    </div>
+                                </div>
+                                <div class="select__options">
+                                    <button class="select__option" value="Белый">Белый</button>
+                                    <button class="select__option" value="Цветной">Цветной</button>
+                                </div>
+                            </div> <!---конец--->
+                        </div>
+                        <div class="calculator__cost">
+                            <h2 class="cost__title">
+                                Итого:
+                                <span class="cost__cost"></span>
+                                руб.
+                            </h2>
+                            <p class="cost__note">(Ориентировочная стоимость)</p>
+                        </div>
+                        <div class="calculator__buttons">
+                            <div class="button__question">
+                                <div class="button__question-block">
+                                    <img class="button__icon" src="img/icons/question.svg" alt="question">
+                                </div>
+                                <button class="button__cost">ОФОРМИТЬ ЗАКАЗ</button>
+                            </div>
+                            <button class="button__download">СКАЧАТЬ СМЕТУ</button>
+                        </div>
+                    </div>
+                    <img src="img/preview.png" alt="preview" class="calculator__img">
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
